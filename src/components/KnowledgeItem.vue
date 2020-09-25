@@ -4,9 +4,10 @@
       <img src="src/assets/python.png" alt="python logo">
     </div>
 
-    <div>
-      <strong>{{ state.name }}</strong>
-    </div>
+
+    <strong>{{ state.name }}</strong>
+    <strong>{{ state.value }} %</strong>
+
   </div>
 </template>
 
@@ -22,7 +23,7 @@ export default {
   setup(props) {
     const state = reactive({
       name: props.name,
-      value: 0,
+      value: props.value,
       logo: ""
     })
     return {
@@ -34,18 +35,20 @@ export default {
 
 <style scoped>
 .Item_Panel {
+  display: flex;
+  flex-direction: column;
   border: 1px solid dimgray;
   border-radius: 15px;
   background-color: #2c3e50;
-  max-width: 200px;
+  min-width: 50px;
   max-height: 300px;
-  padding: 100px;
+  padding: 20px;
   margin: 5px;
   transition: all 0.50s ease;
 }
 
 .Item_Panel:hover {
-  transform: scale(1.05, 1.05);
+  transform: scale(1.5, 1.5);
 }
 
 strong {

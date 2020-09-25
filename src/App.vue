@@ -4,9 +4,18 @@
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
+  <footer >
+    <label>Hello</label>
+  </footer>
 </template>
 
 <style>
+.Home_footer{
+  background-color: dimgray;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
